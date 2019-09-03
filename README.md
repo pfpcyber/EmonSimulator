@@ -9,9 +9,11 @@ https://docs.google.com/forms/d/e/1FAIpQLSeGI2N-ELRc8O4-raBWqloPCQTnicRMXv9GBJgf
 
 
 2. Compile the source code.( This assumed you are running linux )
+
 gcc emonSimulator.c -o emonSim
 
 3. Start the program from the terminal after compile. The program will open a socket on port 7001.
+
 ./emonSim
 
 4. Run PFP Gatewway software (This information is provide when you signup). Note PFP Gateway software has to be on the same subnet as your emonSim.
