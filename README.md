@@ -16,8 +16,10 @@ gcc emonSimulator.c -o emonSim
 
 ./emonSim
 
-4. Run PFP Gatewway software (This information is provide when you signup). Note PFP Gateway software has to be on the same subnet as your emonSim.
+4. Now get the ip address of your computer. You will need this ip address for our cloud platform.
 
-5. Log into PFP cloud platform and add the device.
+5. Run PFP Gatewway software (This information is provide when you signup). Note PFP Gateway software has to be on the same subnet as your emonSim.
+
+6. Log into PFP cloud platform and add the device.
 
 
