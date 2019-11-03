@@ -21,6 +21,29 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <sys/types.h>
+// ----------------------------------------------------------------------------
+// Copyright 2019 PFP Cybersecurity.
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+// ----------------------------------------------------------------------------
+#include <netdb.h>
+#include <netinet/in.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <sys/types.h>
 #include<stdio.h>
 
 #define MAX 80
@@ -109,7 +132,7 @@ long  bytesToLong(int8_t l0,int8_t l1,int8_t l2,int8_t l3,int8_t l4,int8_t l5,in
 
 
 int8_t * pfp_emon_create_ack_for_client(int commandType, long numberOfBytes) {
-	static int8_t b[24];
+	static int8_t b[64];
 
 	int8_t *totalBytes = longToBytes(numberOfBytes);
 	int8_t *successBytes = intToBytes(3);
